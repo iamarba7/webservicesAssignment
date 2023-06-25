@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Cyprian/Documents/web_services/web_services.csproj",
+      "projectUniqueName": "/Users/Cyprian/Desktop/webservicesAssignment/web_services.csproj",
       "projectName": "web_services",
-      "projectPath": "/Users/Cyprian/Documents/web_services/web_services.csproj",
+      "projectPath": "/Users/Cyprian/Desktop/webservicesAssignment/web_services.csproj",
       "packagesPath": "/Users/Cyprian/.nuget/packages/",
-      "outputPath": "/Users/Cyprian/Documents/web_services/obj/",
+      "outputPath": "/Users/Cyprian/Desktop/webservicesAssignment/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/Cyprian/.nuget/NuGet/NuGet.Config"
