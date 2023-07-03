@@ -1,4 +1,4 @@
-@import NewWeb
+
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm.aspx.cs" Inherits="NewWeb.WebForm" Trace="true" %>
 
 <!DOCTYPE html>
