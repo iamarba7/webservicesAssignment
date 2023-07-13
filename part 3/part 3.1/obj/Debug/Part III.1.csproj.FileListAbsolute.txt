@@ -1,0 +1,2 @@
+D:\Repositories\IS283 - Lab Assignment\Part III.1\obj\Debug\Part III.1.csproj.AssemblyReference.cache
+D:\Repositories\IS283 - Lab Assignment\Part III.1\obj\Debug\Part III.1.csproj.CoreCompileInputs.cache

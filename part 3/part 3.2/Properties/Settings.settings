@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Part_III._2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Part_III_2_StateService_LotteryService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44359/LotteryService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

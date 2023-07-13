@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://StateServices/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://StateServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://StateServices/">
+      <s:element name="GenerateRandomNumbers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GenerateRandomNumbersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateRandomNumbersResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GenerateRandomNumbersSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateRandomNumbers" />
+  </wsdl:message>
+  <wsdl:message name="GenerateRandomNumbersSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateRandomNumbersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LotteryServiceSoap">
+    <wsdl:operation name="GenerateRandomNumbers">
+      <wsdl:input message="tns:GenerateRandomNumbersSoapIn" />
+      <wsdl:output message="tns:GenerateRandomNumbersSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LotteryServiceSoap" type="tns:LotteryServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GenerateRandomNumbers">
+      <soap:operation soapAction="http://StateServices/GenerateRandomNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LotteryServiceSoap12" type="tns:LotteryServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GenerateRandomNumbers">
+      <soap12:operation soapAction="http://StateServices/GenerateRandomNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LotteryService">
+    <wsdl:port name="LotteryServiceSoap" binding="tns:LotteryServiceSoap">
+      <soap:address location="https://localhost:44359/LotteryService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LotteryServiceSoap12" binding="tns:LotteryServiceSoap12">
+      <soap12:address location="https://localhost:44359/LotteryService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
